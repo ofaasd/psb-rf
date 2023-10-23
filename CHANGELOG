@@ -1,0 +1,3 @@
+v.1 build 1
+    Build login page and dashboard
+    Password encrypted with Bcrypt
