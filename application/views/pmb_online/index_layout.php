@@ -80,7 +80,7 @@
                         <i class="feather icon-menu"></i>
                     </a>
                     <a href="<?php echo base_url()?>dashboard">
-                        <h5>Calon Mahasiswa STIFERA</h5>
+                        <h5>PSB PPATQ-RF</h5>
                     </a>
                     <a class="mobile-options">
                         <i class="feather icon-more-horizontal"></i>
@@ -135,65 +135,14 @@
 									<span class="pcoded-mtext">Dashboard</span>
 								</a>
 							</li>
-							<li class="pcoded-hasmenu">
-								<a href="<?php echo base_url();?>formulir/info">
-									<span class="pcoded-micon"><i class="feather icon-user"></i></span>
-									<span class="pcoded-mtext">Informasi Pribadi</span>
-								</a>
-							</li>
-							<li class="pcoded-hasmenu">
-								<a href="<?php echo base_url();?>formulir/penpres">
-									<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
-									<span class="pcoded-mtext">Nilai Rapor dan Prestasi</span>
-								</a>
-							</li>
-							<li class="pcoded-hasmenu">
-								<?php
-									$id = $this->session->userdata("id_user");
-									$nopen = (!empty($this->db->get_where("user_guest",array("id"=>$id))->row()->no_pendaftaran))?$this->db->get_where("user_guest",array("id"=>$id))->row()->no_pendaftaran:"";
-									if(empty($nopen)){
-								?>
-									<a href="<?php echo base_url();?>formulir/cetak_formulir/0" <?php (empty($nopen))?"disabled":""?>>
-										<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
-										<span class="pcoded-mtext">Cetak Formulir Pendaftaran</span>
-									</a>
-								<?php
-									}else{
-								?>
-									<a href="<?php echo base_url();?>formulir/cetak_formulir/<?php echo $nopen ?>" <?php (empty($nopen))?"disabled":""?> >
-										<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
-										<span class="pcoded-mtext">Cetak Formulir Pendaftaran</span>
-									</a>
-								<?php
-									}
-								?>
-								
-							</li>
 							
 							<li class="pcoded-hasmenu">
-								<a href="<?php echo base_url();?>formulir/upload_bukti">
-									<span class="pcoded-micon"><i class="feather icon-upload"></i></span>
-									<span class="pcoded-mtext">Upload Bukti Pembayaran</span>
+								<a href="<?php echo base_url();?>psb/index">
+									<span class="pcoded-micon"><i class="feather icon-user"></i></span>
+									<span class="pcoded-mtext">PSB</span>
 								</a>
 							</li>
-							<li class="pcoded-hasmenu">
-								<a href="<?php echo base_url();?>formulir/upload_foto">
-									<span class="pcoded-micon"><i class="feather icon-upload"></i></span>
-									<span class="pcoded-mtext">Upload Foto</span>
-								</a>
-							</li>
-							<li class="pcoded-hasmenu">
-								<a href="<?php echo base_url();?>formulir/jadwal_ujian">
-									<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
-									<span class="pcoded-mtext">Jadwal Ujian</span>
-								</a>
-							</li>
-							<li class="pcoded-hasmenu">
-								<a href="<?php echo base_url();?>formulir/pengumuman_ujian">
-									<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
-									<span class="pcoded-mtext">Pengumuman Ujian</span>
-								</a>
-							</li>
+							
 							
 							<li class="pcoded-hasmenu">
 								<a href="#">

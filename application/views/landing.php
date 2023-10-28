@@ -29,100 +29,47 @@
 	<span class="sr-only">Next</span>
 	</a>
 	</div> -->
-<div class="row">
+<!-- <div class="row">
 	<div class="col-md-12">
 		<video width="100%" autoplay muted loop>
 		  <source src="<?php echo base_url() ?>assets/video/cover.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 		</video>
 	</div>
-</div>
+</div> -->
+<div class="jumbotron">
+	<h4 class="text-center font-weight-bold">
+		ANJUNGAN INFORMASI <br /><br />
+		
+		PENERIMAAN PESERTA DIDIK BARU (PPDB)<br /><br />
 
+		PPATQ RAUDLATUL FALAH<br /><br />
+
+		TAHUN AJARAN 2024/2025<br /><br />
+	</h4>
+</div>
 <div class="card-block">
 	<div class="row">
-		<div class="col-md-8">
-			<div class="row">
-				<div class="col-md-6">
-					<h5>Pengumuman</h5>
-					
+		<div class="col-md-8 bg-white">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+				</li>
+				<!-- <li class="nav-item" role="presentation">
+					<button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+				</li> -->
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<br /><br />
+					<?php include('home.php');?>
 				</div>
-				<div class="col-md-6" >
-					<div align="right"><a href="<?php echo base_url()?>welcome/artikel_all/1" style="text-align:right">Lihat Semua Pengumuman &raquo; </a></div>
-				</div>
+				<!-- <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div> -->
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				
-				<?php foreach($artikel1 as $row){?>
-				<div class="col-md-3">
-					<div class="card-header">
-						<img src="https://stifera.ac.id/siakad/demo/assets/artikel/<?php echo $row->gambar ?>" width="100%">	
-					</div>
-					<div class="card-block">
-						<a href="<?php echo base_url() ?>welcome/artikel/<?php echo $row->id ?>"><b><p><?php echo $row->judul ?></p></b></a>
-					</div>
-				</div>
-				<?php } ?>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h5>Agenda</h5>
-					
-				</div>
-				<div class="col-md-6" >
-					<div align="right"><a href="<?php echo base_url()?>welcome/artikel_all/2" style="text-align:right">Lihat Semua Agenda &raquo; </a></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				
-				<?php foreach($artikel2 as $row){?>
-				<div class="col-md-3">
-					<div class="card-header">
-						<img src="https://stifera.ac.id/siakad/demo/assets/artikel/<?php echo $row->gambar ?>" width="100%">	
-					</div>
-					<div class="card-block">
-						<a href="<?php echo base_url() ?>welcome/artikel/<?php echo $row->id ?>"><b><p><?php echo $row->judul ?></p></b></a>
-					</div>
-				</div>
-				<?php } ?>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<h5>Berita</h5>
-					
-				</div>
-				<div class="col-md-6" >
-					<div align="right"><a href="<?php echo base_url()?>welcome/artikel_all/3" style="text-align:right">Lihat Semua Berita &raquo; </a></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				
-				<?php foreach($artikel3 as $row){?>
-				<div class="col-md-3">
-					<div class="card-header">
-						<img src="https://stifera.ac.id/siakad/demo/assets/artikel/<?php echo $row->gambar ?>" width="100%">	
-					</div>
-					<div class="card-block">
-						<a href="<?php echo base_url() ?>welcome/artikel/<?php echo $row->id ?>"><b><p><?php echo $row->judul ?></p></b></a>
-					</div>
-				</div>
-				<?php } ?>
-			</div>
-			
 		</div>
 		<div class="col-md-4">
 			<form action="<?php echo base_url()?>auth" method="post" class="j-pro" id="j-pro">
@@ -150,7 +97,7 @@
 							<label class="j-icon-right" for="login">
 								<i class="icofont icofont-ui-user"></i>
 							</label>
-							<input type="email" id="login" name="email" placeholder="Email" style="font-size:14px">
+							<input type="text" id="login" name="nik" placeholder="NIK" style="font-size:14px">
 						</div>
 					</div>
 					<!-- end login -->

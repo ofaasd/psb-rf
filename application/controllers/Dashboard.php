@@ -14,17 +14,20 @@
 
 		function index()
 		{
-			$gelombang = $this->Model_online->get_gelombang('pmb_gelombang');
+			$gelombang = $this->Model_online->get_gelombang('psb_gelombang');
+			$hasil['nik'] = $this->session->userdata('nim');
+			$data['nik'] = $hasil['nik'];
 			if($gelombang->num_rows() > 0){	
-				$data['title'] = "Dashboard - Calon Mahasiswa Baru";			
+				$data['title'] = "Dashboard - Calon Santri Baru";			
 				$hasil['asd'] = "";
 				$data['content'] = $this->load->view('pmb_online/dashboard',$hasil,true);
 				
 			}else{
 				$hasil['msg'] = "Belum ada gelombang pendaftaran";
-				$data['title'] = "Formulir Mahasiswa - Academic Portal";
+				$data['title'] = "Formulir Santri - Academic Portal";
 				$data['content'] = $this->load->view('no_gelombang',$hasil,true);
 			}
+			
 			
 			$this->load->view('pmb_online/index_layout',$data);
 		}

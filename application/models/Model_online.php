@@ -40,7 +40,7 @@
 			$data_kab = $this->db->get_where('wilayah', array('id_wil' => $data_negara[0]['kotakab']))->result_array();
 			$data_kec = $this->db->get_where('wilayah', array('id_wil' => $data_negara[0]['kecamatan']))->result_array();
 			$data_sekolah = $this->db->get_where('pmb_schools', array('id' => $data_negara[0]['asal_sekolah']))->result_array();
-			$gelombang = $this->db->get_where('pmb_gelombang', array('nama_gel' => $data_negara[0]['gelombang']))->result_array();
+			$gelombang = $this->db->get_where('psb_gelombang', array('nama_gel' => $data_negara[0]['gelombang']))->result_array();
 			$jurusan1 = $this->db->get_where('program_studi', array('kode' => $data_negara[0]['pilihan1']))->result_array();
 			$jurusan2 = $this->db->get_where('program_studi', array('kode' => $data_negara[0]['pilihan2']))->result_array();
 			$mou = $this->db->get_where('pmb_mou_afkar', array('id_sekolah' => $data_negara[0]['is_mou']))->result_array();

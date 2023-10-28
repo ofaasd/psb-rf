@@ -26,24 +26,10 @@
 							</tr>
 							<tr>
 								<td>3. Cetak Formulir Pendaftaran 
-									<?php
-										$id = $this->session->userdata("id_user");
-										$nopen = (!empty($this->db->get_where("user_guest",array("id"=>$id))->row()->no_pendaftaran))?$this->db->get_where("user_guest",array("id"=>$id))->row()->no_pendaftaran:"";
-										if(empty($nopen)){
-									?>
-											<a href="#" <?php (empty($nopen))?"disabled":""?> class="btn btn-danger btn-sm">
-												Verifikasi Terlebih Dahulu
-											</a>
-									<?php
-										}else{
-									?>
-										<a href="<?php echo base_url();?>formulir/cetak_formulir/<?php echo $nopen ?>" <?php (empty($nopen))?"disabled":""?>  class="btn btn-primary btn-sm">
-											<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
-											<span class="pcoded-mtext">Klik Disini</span>
-										</a>
-									<?php
-										}
-									?>
+									<a href="<?php echo base_url();?>formulir/cetak_formulir/<?php echo $nik ?>" <?php (empty($nik))?"disabled":""?>  class="btn btn-primary btn-sm">
+										<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
+										<span class="pcoded-mtext">Klik Disini</span>
+									</a>
 								</td>
 							</tr>
 							<tr>

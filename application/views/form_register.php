@@ -19,18 +19,18 @@
 						<!-- start login -->
 						<div class="j-unit">
 							<div class="j-input">
-								<label class="j-icon-right" for="nama">
-									<i class="icofont icofont-ui-user"></i>
+								<label class="j-icon-right" for="nik">
+									<i class="icofont-address"></i>
 								</label>
-								<input type="text" id="nama" name="nama" placeholder="Nama..." required>
+								<input type="text" id="nik" name="nik" placeholder="NIK" required>
 							</div>
 						</div>
 						<div class="j-unit">
 							<div class="j-input">
-								<label class="j-icon-right" for="email">
-									<i class="icofont icofont-ui-email"></i>
+								<label class="j-icon-right" for="nama">
+									<i class="icofont icofont-ui-user"></i>
 								</label>
-								<input type="email" id="email" name="email" placeholder="Email..." required>
+								<input type="text" id="nama" name="nama" placeholder="Nama..." required>
 							</div>
 						</div>
 						<!-- end login -->
@@ -44,6 +44,14 @@
 								</label>
 								<input type="date" id="tgl_lahir" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir" required style="padding-bottom:15px;padding-top:10px;">
 								
+							</div>
+						</div>
+						<div class="j-unit">
+							<div class="j-input">
+								<label class="j-icon-right" for="password">
+									<i class="icofont icofont-ui-key"></i>
+								</label>
+								<input type="password" id="password" name="password" placeholder="password" required>
 							</div>
 						</div>
 						<!-- end password -->

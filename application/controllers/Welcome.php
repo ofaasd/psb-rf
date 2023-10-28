@@ -10,18 +10,16 @@ class Welcome extends CI_Controller {
 		{
 			redirect('dashboard');
 		}
-		$this->load->model('Model_simpeg');
-		$this->load->model('Model_pegawai');
 	}
 
 	public function index()
 	{
-		$data['title'] = "STIFERA";
+			$data['title'] = "PPDB - PPATQ RADLATUL FALAH PATI";
 			//$data['menu'] = $this->Model_simpeg->getMenu($this->authact->getSimpegRole());
 			//$hasil['menu_tree'] = $hasil['menu_tree'] = $this->Model_menu_tree->get_all_p0();
 
 			
-			$hasil['query'] = $this->Model_pegawai->get_all();
+			//$hasil['query'] = $this->Model_pegawai->get_all();
 			$hasil['artikel1'] = $this->db->limit(4)->order_by("id","desc")->get_where("master_post",array("kategori"=>1))->result();
 			$hasil['artikel2'] = $this->db->limit(4)->order_by("id","desc")->get_where("master_post",array("kategori"=>2))->result();
 			$hasil['artikel3'] = $this->db->limit(4)->order_by("id","desc")->get_where("master_post",array("kategori"=>3))->result();
@@ -50,10 +48,7 @@ class Welcome extends CI_Controller {
 		$data['title'] = "Register - STIFERA";
 			//$data['menu'] = $this->Model_simpeg->getMenu($this->authact->getSimpegRole());
 			//$hasil['menu_tree'] = $hasil['menu_tree'] = $this->Model_menu_tree->get_all_p0();
-
-			
-			$hasil['query'] = $this->Model_pegawai->get_all();
-
+			$hasil = '';
 			$data['content'] = $this->load->view('form_register',$hasil,true);
 			$this->load->view('index_login',$data);
 	}
