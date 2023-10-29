@@ -69,8 +69,9 @@
 					$hasil = $this->db->update('psb_peserta_online',$data,array('id'=>$id));
 				}
 				if($hasil){
+					$psb_peserta_id = 0;
 					if(empty($id)){
-						$id = $this->db->insert_id();
+						$psb_peserta_id = $this->db->insert_id();
 					}
 					$data2 = array(
 						'nama_ayah' => $this->input->post('nama_ayah'),
@@ -84,9 +85,10 @@
 						'alamat_ibu' => $this->input->post('alamat_ibu'),
 						'no_telp' => $this->input->post('no_telp'),
 						'created_at' => $dateTime->format('U'),
-						'psb_peserta_id' => $id,
+						//'psb_peserta_id' => $id,
 					);
 					if(empty($id)){
+						$data2['psb_peserta_id'] = $psb_peserta_id;
 						$hasil2 = $this->db->insert('psb_wali_peserta',$data2);
 					}else{
 						$hasil2 = $this->db->update('psb_wali_peserta',$data2,array('psb_peserta_id'=>$id));
@@ -100,9 +102,10 @@
 						'nss' => $this->input->post('nss'),
 						'npsn' => $this->input->post('npsn'),
 						'nisn' => $this->input->post('nisn'),
-						'psb_peserta_id' => $id,
+						//'psb_peserta_id' => $id,
 					);
 					if(empty($id)){
+						$data3['psb_peserta_id'] = $psb_peserta_id;
 						$hasil3 = $this->db->insert('psb_sekolah_asal',$data3);
 					}else{
 						$hasil3 = $this->db->update('psb_sekolah_asal',$data3,array('psb_peserta_id'=>$id));
