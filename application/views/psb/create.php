@@ -75,7 +75,7 @@
 							<select class="form-control" name="provinsi" id="provinsi">
 								<option value=0>--Pilih Provinsi--</option>
 								<?php foreach($provinsi as $row){?>
-									<option value="<?= $row->prov_id?>" <?=($psb_peserta->prov_id == $row->prov_id)?'selected':''?>><?=$row->prov_name?></option>
+									<option value="<?= $row->prov_id?>" <?=(!empty($psb_peserta) && $psb_peserta->prov_id == $row->prov_id)?'selected':''?>><?=$row->prov_name?></option>
 								<?php } ?>
 							</select>
 						</div>
@@ -86,7 +86,7 @@
 								<?php if(!empty($kota)) { 
 									foreach($kota as $row){
 									?>
-									<option value="<?=$row->city_id?>" <?=($psb_peserta->kota_id == $row->city_id)?'selected':''?>><?=$row->city_name?></option>
+									<option value="<?=$row->city_id?>" <?=(!empty($psb_peserta) && $psb_peserta->kota_id == $row->city_id)?'selected':''?>><?=$row->city_name?></option>
 								<?php }} ?>	
 							</select>
 						</div>
