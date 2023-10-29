@@ -112,7 +112,7 @@
                         <i class="feather icon-menu"></i>
                     </a>
                     <a href="<?php echo base_url()?>dashboard">
-                        <h5>SEKOLAH TINGGI ILMU FARMASI NUSAPUTERA</h5>
+                        <h5>PPDB - PPATQ RADLATUL FALAH PATI</h5>
 						<!--<img src="<?php echo base_url();?>/assets/images/logo/logo.png" style="width: 90px; height: 90;">-->
                         <!-- <img class="img-fluid" src="<?php echo base_url();?>/assets/images/logo/logo.png" alt="Dijawa Logo" height="30" width="150"> -->
                     </a>

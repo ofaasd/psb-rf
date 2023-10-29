@@ -2,7 +2,7 @@
 	
 			<div class="j-wrapper j-wrapper-400" style="padding:0;">
 				<div class="j-header">
-					<center><img src="<?php echo base_url();?>/assets/images/logo/logo.png" class="img-radius" alt="User-Profile-Image" width="150"></center>
+					<h3><center>PPDB - PPATQ RADLATUL FALAH PATI</center></h3>
 				</div>
 				<form action="<?php echo base_url()?>auth/register" method="post" class="j-pro" id="j-pro">
 					<!-- end /.header -->

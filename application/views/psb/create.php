@@ -35,11 +35,11 @@
 						<div class="form-group">
 							<label for="nama_panggilan">Jenis Kelamin</label><br />
 							<div class="form-check col-md-12" style="margin-left:10px;">
-								<input type="radio" name="jenis_kelamin" class="form-check-input" <?=($psb_peserta->jenis_kelamin == 'L')?'checked':''?> value='L' id="laki-laki" required>
+								<input type="radio" name="jenis_kelamin" class="form-check-input" <?=(!empty($psb_peserta) && $psb_peserta->jenis_kelamin == 'L')?'checked':''?> value='L' id="laki-laki" required>
 								<label class="form-check-label" for="laki-laki">Laki-laki</label>
 							</div>
 							<div class="form-check col-md-12" style="margin-left:10px;">
-								<input type="radio" name="jenis_kelamin" class="form-check-input" <?=($psb_peserta->jenis_kelamin == 'P')?'checked':''?> value='P' id="perempuan" required>
+								<input type="radio" name="jenis_kelamin" class="form-check-input" <?=(!empty($psb_peserta) && $psb_peserta->jenis_kelamin == 'P')?'checked':''?> value='P' id="perempuan" required>
 								<label class="form-check-label" for="perempuan">Perempuan</label>
 							</div>
 						</div>
@@ -108,12 +108,12 @@
 								<div class="form-group">
 									<label for="pendidikan_ayah">Pendidikan Ayah</label>
 									<select name="pendidikan_ayah" class="form-control" id="pendidikan_ayah">
-										<option value=1 <?=($psb_wali->pendidikan_ayah == 1)?'selected':''?>>S2/S3</option>
-										<option value=2 <?=($psb_wali->pendidikan_ayah == 2)?'selected':''?>>S1</option>
-										<option value=3 <?=($psb_wali->pendidikan_ayah == 3)?'selected':''?>>Diploma</option>
-										<option value=4 <?=($psb_wali->pendidikan_ayah == 4)?'selected':''?>>SMA/MA</option>
-										<option value=5 <?=($psb_wali->pendidikan_ayah == 5)?'selected':''?>>SMP/MTs</option>
-										<option value=6 <?=($psb_wali->pendidikan_ayah == 6)?'selected':''?>>SD/MI</option>
+										<option value=1 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ayah == 1)?'selected':''?>>S2/S3</option>
+										<option value=2 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ayah == 2)?'selected':''?>>S1</option>
+										<option value=3 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ayah == 3)?'selected':''?>>Diploma</option>
+										<option value=4 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ayah == 4)?'selected':''?>>SMA/MA</option>
+										<option value=5 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ayah == 5)?'selected':''?>>SMP/MTs</option>
+										<option value=6 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ayah == 6)?'selected':''?>>SD/MI</option>
 									</select>
 								</div>
 								<div class="form-group">
@@ -137,12 +137,12 @@
 								<div class="form-group">
 									<label for="pendidikan_ibu">Pendidikan ibu</label>
 									<select name="pendidikan_ibu" class="form-control" id="pendidikan_ibu">
-										<option value=1 <?=($psb_wali->pendidikan_ibu == 1)?'selected':''?>>S2/S3</option>
-										<option value=2 <?=($psb_wali->pendidikan_ibu == 2)?'selected':''?>>S1</option>
-										<option value=3 <?=($psb_wali->pendidikan_ibu == 3)?'selected':''?>>Diploma</option>
-										<option value=4 <?=($psb_wali->pendidikan_ibu == 4)?'selected':''?>>SMA/MA</option>
-										<option value=5 <?=($psb_wali->pendidikan_ibu == 5)?'selected':''?>>SMP/MTs</option>
-										<option value=6 <?=($psb_wali->pendidikan_ibu == 6)?'selected':''?>>SD/MI</option>
+										<option value=1 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ibu == 1)?'selected':''?>>S2/S3</option>
+										<option value=2 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ibu == 2)?'selected':''?>>S1</option>
+										<option value=3 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ibu == 3)?'selected':''?>>Diploma</option>
+										<option value=4 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ibu == 4)?'selected':''?>>SMA/MA</option>
+										<option value=5 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ibu == 5)?'selected':''?>>SMP/MTs</option>
+										<option value=6 <?=(!empty($psb_wali) && $psb_wali->pendidikan_ibu == 6)?'selected':''?>>SD/MI</option>
 									</select>
 								</div>
 								<div class="form-group">

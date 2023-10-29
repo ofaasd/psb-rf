@@ -45,7 +45,7 @@ class Welcome extends CI_Controller {
 	}
 	public function register()
 	{
-		$data['title'] = "Register - STIFERA";
+		$data['title'] = "PPDB - PPATQ RADLATUL FALAH PATI";
 			//$data['menu'] = $this->Model_simpeg->getMenu($this->authact->getSimpegRole());
 			//$hasil['menu_tree'] = $hasil['menu_tree'] = $this->Model_menu_tree->get_all_p0();
 			$hasil = '';
