@@ -118,7 +118,7 @@
 								</div>
 								<div class="form-group">
 									<label for="pekerjaan_ayah">Pekerjaan Ayah</label>
-									<input type="text" name="nama_pekerjaan_ayahayah" value="<?=$psb_wali->pekerjaan_ayah??''?>" class="form-control" id="pekerjaan_ayah">
+									<input type="text" name="pekerjaan_ayah" value="<?=$psb_wali->pekerjaan_ayah??''?>" class="form-control" id="pekerjaan_ayah">
 								</div>
 								<div class="form-group">
 									<label for="alamat_ayah">Alamat Lengkap</label>
@@ -147,7 +147,7 @@
 								</div>
 								<div class="form-group">
 									<label for="pekerjaan_ibu">Pekerjaan ibu</label>
-									<input type="text" name="nama_pekerjaan_ibuibu" value="<?=$psb_wali->pekerjaan_ibu??''?>" class="form-control" id="pekerjaan_ibu">
+									<input type="text" name="pekerjaan_ibu" value="<?=$psb_wali->pekerjaan_ibu??''?>" class="form-control" id="pekerjaan_ibu">
 								</div>
 								<div class="form-group">
 									<label for="alamat_ibu">Alamat Lengkap</label>
