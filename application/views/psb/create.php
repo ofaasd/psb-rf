@@ -163,9 +163,9 @@
 						<div class="form-group">
 							<label for="jenjang">Dari</label>
 							<select name="jenjang" class="form-control col-md-2" id="jenjang">
-								<option value=1 <?=($psb_sekolah->jenjang == 1)?'selected':''?>>TK</option>
-								<option value=2 <?=($psb_sekolah->jenjang == 2)?'selected':''?>>RA</option>
-								<option value=3 <?=($psb_sekolah->jenjang == 3)?'selected':''?>>SD/MI</option>
+								<option value=1 <?=(!empty($psb_sekolah) && $psb_sekolah->jenjang == 1)?'selected':''?>>TK</option>
+								<option value=2 <?=(!empty($psb_sekolah) && $psb_sekolah->jenjang == 2)?'selected':''?>>RA</option>
+								<option value=3 <?=(!empty($psb_sekolah) && $psb_sekolah->jenjang == 3)?'selected':''?>>SD/MI</option>
 								
 							</select>
 						</div>
