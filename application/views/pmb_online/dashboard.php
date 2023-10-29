@@ -16,17 +16,17 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>1. Mengisi <a href="<?php echo base_url()?>formulir/info" class="btn btn-primary btn-sm">Info Pribadi</a>,<a href="<?php echo base_url()?>formulir/penpres" class="btn btn-primary btn-sm">Nilai Rapor dan Prestasi</a> dan <a href="<?php echo base_url()?>formulir/upload_foto" class="btn btn-primary btn-sm">Upload Foto</a>
+								<td>1. Mengisi <a href="<?php echo base_url()?>psb/index" class="btn btn-primary btn-sm">Data Pendaftaran PSB</a>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									2. Validasi Data Silahkan <a href="#" class="btn btn-primary btn-sm" id="validasi_biodata" onclick="return validasi()">Klik Disini Untuk Validasi</a>
+									2. Validasi Data Silahkan <a href="<?php echo base_url()?>psb/index" class="btn btn-primary btn-sm" >Pastikan data sudah benar kemudian klik tombol validasi</a>
 								</td>
 							</tr>
 							<tr>
 								<td>3. Cetak Formulir Pendaftaran 
-									<a href="<?php echo base_url();?>formulir/cetak_formulir/<?php echo $nik ?>" <?php (empty($nik))?"disabled":""?>  class="btn btn-primary btn-sm">
+									<a href="<?php echo base_url();?>psb/cetak"  class="btn btn-primary btn-sm">
 										<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
 										<span class="pcoded-mtext">Klik Disini</span>
 									</a>
