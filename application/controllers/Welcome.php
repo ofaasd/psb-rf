@@ -48,7 +48,8 @@ class Welcome extends CI_Controller {
 		$data['title'] = "PPDB - PPATQ RADLATUL FALAH PATI";
 			//$data['menu'] = $this->Model_simpeg->getMenu($this->authact->getSimpegRole());
 			//$hasil['menu_tree'] = $hasil['menu_tree'] = $this->Model_menu_tree->get_all_p0();
-			$hasil = '';
+			$provinsi = $this->db->get('provinces')->result();
+			$hasil['provinsi'] = $provinsi;
 			$data['content'] = $this->load->view('form_register',$hasil,true);
 			$this->load->view('index_login',$data);
 	}
@@ -103,5 +104,12 @@ class Welcome extends CI_Controller {
 
 		$data['content'] = $this->load->view('artikel',$hasil,true);
 		$this->load->view('index_login',$data);
+	}
+	function get_kota(){
+		$id_kota = $this->input->post("id");
+		$kota = $this->db->get_where("cities",array("prov_id"=>$id_kota))->result();
+		foreach($kota as $row){
+			echo "<option value='" . $row->city_id . "'>" . $row->city_name . "</option>";
+		}
 	}
 }
