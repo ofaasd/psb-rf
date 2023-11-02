@@ -15,7 +15,7 @@
 
 		function index()
 		{
-			$username = $this->input->post("nik");
+			$username = $this->input->post("username");
 			$p = $this->input->post("password");
 
 			$bcrypt = new Bcrypt();
@@ -47,7 +47,7 @@
 				}
 			}else{
 				//echo "gagal_login";
-				$this->session->set_flashdata('gagal', 'Email Tidak Terdaftar');
+				$this->session->set_flashdata('gagal', 'Username Tidak Terdaftar');
 				redirect("welcome");
 			}
 			// $pass = $bcrypt->create("admin");

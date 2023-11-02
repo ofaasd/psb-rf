@@ -26,10 +26,20 @@
 		function create(){
 			$gelombang = $this->Model_online->get_gelombang('psb_gelombang');
 			$hasil['nik'] = $this->session->userdata('nim');
+			$hasil['id_user'] = $this->session->userdata('id_user');
 			$data['nik'] = $hasil['nik'];
 			$data['title'] = "Dashboard - Calon Santri Baru";
 			$hasil['provinsi'] = $this->db->get('provinces')->result();
-			$data['content'] = $this->load->view('psb/create',$hasil,true);
+			$hasil['url_insert_all'] = base_url('psb/simpan');
+			$hasil['user'] = $this->db->get_where('user_psb',array('id'=>$hasil['id_user']))->row();
+
+			$dob = new DateTime($hasil['user']->tanggal_lahir);
+			$today   = new DateTime('today');
+			$hasil['tahun_lahir'] = $dob->diff($today)->y;
+			$hasil['bulan_lahir'] = $dob->diff($today)->m;
+
+			$hasil['redirect1'] = base_url('psb/index');
+			$data['content'] = $this->load->view('psb/create2',$hasil,true);
 			$this->load->view('pmb_online/index_layout',$data);	
 		}
 		function simpan(){

@@ -30,13 +30,16 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/icon/icofont/css/icofont.css">
     <!-- feather Awesome -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/icon/feather/css/feather.css">
+
+    <!-- chart js -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bower_components/chartist/css/chartist.css">
     <!-- Data Table Css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/pages/data-table/css/buttons.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bower_components/multiselect/css/multi-select.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bower_components/bootstrap-multiselect/css/bootstrap-multiselect.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bower_components/jquery.steps/css/jquery.steps.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bower_components/jquery.steps/css/jquery.steps.css">
     <!-- datepicker css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/bootstrap-datepicker3.css">
     <!-- Style.css -->
@@ -47,13 +50,15 @@
       <!-- Notification.css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/pages/notification/notification.css">
     <!-- Required Jquery -->
-<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/jquery/js/jquery.min.js"></script>
-<!-- <script src="<?php echo base_url()?>assets/js/app.js"></script> -->
-<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/bootstrap/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/jquery/js/jquery.min.js"></script>
+	<!-- <script src="<?php echo base_url()?>assets/js/app.js"></script> -->
+	<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/popper.js/js/popper.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/bootstrap/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+	<script src="<?php echo base_url()?>assets/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>assets/js/Chart.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -240,6 +245,10 @@
 <script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/modernizr/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/modernizr/js/css-scrollbars.js"></script>
 
+<!-- chart js -->
+<script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/chart.js/js/Chart.js"></script>
+<!-- <script type="text/javascript" src="<?php echo base_url()?>assets/pages/chart/chartjs/chartjs-custom.js"></script> -->
+
 <!-- data-table js -->
 <script src="<?php echo base_url()?>assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url()?>assets/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
@@ -258,29 +267,28 @@
 <script type="text/javascript" src="<?php echo base_url()?>assets/bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 <!-- Custom js -->
 <script src="<?php echo base_url()?>assets/pages/data-table/js/data-table-custom.js"></script>
-
-<script src="<?php echo base_url()?>assets/pages/form-validation/validate.js"></script>
-<script src="<?php echo base_url()?>assets/pages/forms-wizard-validation/form-wizard.js"></script>
-
- <!-- notification js -->
 <!--     <script type="text/javascript" src="<?php echo base_url()?>assets/js/bootstrap-growl.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>assets/pages/notification/notification.js"></script> -->
-
+<script src="<?php echo base_url()?>assets/pages/form-validation/validate.js"></script>
+<script src="<?php echo base_url()?>assets/pages/forms-wizard-validation/form-wizard.js"></script>
 <script src="<?php echo base_url()?>assets/js/pcoded.min.js"></script>
 <script src="<?php echo base_url()?>assets/js/select2.full.min.js"></script>
 <script src="<?php echo base_url()?>assets/js/vartical-layout.min.js"></script>
-<script src="<?php echo base_url()?>assets/bower_components/multiselect/js/jquery.multi-select.js"></script>
-
 
 <script src="<?php echo base_url()?>assets/bower_components/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
 
-<script src="<?php echo base_url()?>assets/pages/advance-elements/select2-custom.js"></script>
+<script src="<?php echo base_url()?>assets/bower_components/multiselect/js/jquery.multi-select.js"></script>
 
-<script src="<?php echo base_url()?>assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/js/script.js"></script>
 
 <script src="<?php echo base_url()?>assets/bower_components/jquery.steps/js/jquery.steps.js"></script>
 <script src="<?php echo base_url()?>assets/bower_components/jquery-validation/js/jquery.validate.js"></script>
+
+
+<script src="<?php echo base_url()?>assets/pages/advance-elements/select2-custom.js"></script>
+
+
+<script src="<?php echo base_url()?>assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/script.js"></script>
 </body>
 
 </html>

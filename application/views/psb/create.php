@@ -20,83 +20,99 @@
 					<form action="javascript:void(0)" method="post" id="form_pendaftaran">
 						<input type="hidden" name="id" value="<?=(!empty($id))?$id:""?>">
 						<h4>Data Santri Baru</h4>
-						<div class="form-group">
-							<label for="nik">NIK</label>
-							<input type="text" name="nik" class="form-control" id="nik" value="<?=$psb_peserta->nik??''?>" required>
-						</div>
-						<div class="form-group">
-							<label for="nama">Nama Lengkap</label>
-							<input type="text" name="nama" class="form-control" id="nama" value="<?=$psb_peserta->nama??''?>" required>
-						</div>
-						<div class="form-group">
-							<label for="nama_panggilan">Nama Panggilan</label>
-							<input type="text" name="nama_panggilan" class="form-control" value="<?=$psb_peserta->nama_panggilan??''?>" id="nama_panggilan">
-						</div>
-						<div class="form-group">
-							<label for="nama_panggilan">Jenis Kelamin</label><br />
-							<div class="form-check col-md-12" style="margin-left:10px;">
-								<input type="radio" name="jenis_kelamin" class="form-check-input" <?=(!empty($psb_peserta) && $psb_peserta->jenis_kelamin == 'L')?'checked':''?> value='L' id="laki-laki" required>
-								<label class="form-check-label" for="laki-laki">Laki-laki</label>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="nik">NIK</label>
+									<input type="text" name="nik" class="form-control" id="nik" value="<?=$psb_peserta->nik??''?>" required>
+								</div>
+								<div class="form-group">
+									<label for="nama">Nama Lengkap</label>
+									<input type="text" name="nama" class="form-control" id="nama" value="<?=$psb_peserta->nama??''?>" required>
+								</div>
+								<div class="form-group">
+									<label for="nama_panggilan">Nama Panggilan</label>
+									<input type="text" name="nama_panggilan" class="form-control" value="<?=$psb_peserta->nama_panggilan??''?>" id="nama_panggilan">
+								</div>
+								<div class="form-group">
+									<label for="nama_panggilan">Jenis Kelamin</label><br />
+									<div class="form-check col-md-12" style="margin-left:10px;">
+										<input type="radio" name="jenis_kelamin" class="form-check-input" <?=(!empty($psb_peserta) && $psb_peserta->jenis_kelamin == 'L')?'checked':''?> value='L' id="laki-laki" required>
+										<label class="form-check-label" for="laki-laki">Laki-laki</label>
+									</div>
+									<div class="form-check col-md-12" style="margin-left:10px;">
+										<input type="radio" name="jenis_kelamin" class="form-check-input" <?=(!empty($psb_peserta) && $psb_peserta->jenis_kelamin == 'P')?'checked':''?> value='P' id="perempuan" required>
+										<label class="form-check-label" for="perempuan">Perempuan</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="tempat_lahir">Tempat Lahir</label>
+									<input type="text" name="tempat_lahir" class="form-control" id="tempat_lahir" value="<?=$psb_peserta->tempat_lahir??''?>" required>
+								</div>
+								<div class="form-group">
+									<label for="tanggal_lahir">Tanggal Lahir</label>
+									<input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir" value="<?=$psb_peserta->tanggal_lahir??''?>" required>
+								</div>
+								<div class="form-group">
+									<label for="usia_bulan">Usia</label>
+									<div class="row" style="margin-left:0px;">
+													<div class="col-md-2" style="padding:0">
+														<input type="number" name="usia_tahun" class="form-control " id="usia_tahun" value="<?=$psb_peserta->usia_tahun??''?>" placeholder="Tahun" >
+													</div>
+													<div class="col-md-2" style="padding:5px">
+														<label for="tempat_lahir">Tahun</label>
+													</div>
+													<div class="col-md-2" style="padding:0">
+														<input type="number" name="usia_bulan" class="form-control" id="usia_bulan" value="<?=$psb_peserta->usia_bulan??''?>" placeholder="Bulan"  >
+													</div>
+													<div class="col-md-2" style="padding:5px">
+														<label for="tempat_lahir">Bulan</label>
+													</div>
+												</div>
+								</div>
 							</div>
-							<div class="form-check col-md-12" style="margin-left:10px;">
-								<input type="radio" name="jenis_kelamin" class="form-check-input" <?=(!empty($psb_peserta) && $psb_peserta->jenis_kelamin == 'P')?'checked':''?> value='P' id="perempuan" required>
-								<label class="form-check-label" for="perempuan">Perempuan</label>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="jumlah_saudara">Jumlah Saudara Kandung</label>
+									<input type="number" name="jumlah_saudara" class="form-control" id="jumlah_saudara" value="<?=$psb_peserta->jumlah_saudara??''?>">
+								</div>
+								<div class="form-group">
+									<label for="anak_ke">Anak ke</label>
+									<input type="number" name="anak_ke" class="form-control" id="anak_ke" value="<?=$psb_peserta->anak_ke??''?>">
+								</div>
+								<div class="form-group">
+									<label for="alamat">Alamat Lengkap</label>
+									<textarea class="form-control" name="alamat" id="alamat"><?=$psb_peserta->alamat??''?></textarea>
+								</div>
+								<div class="form-group">
+									<label for="provinsi">Provinsi</label>
+									<select class="form-control" name="provinsi" id="provinsi">
+										<option value=0>--Pilih Provinsi--</option>
+										<?php foreach($provinsi as $row){?>
+											<option value="<?= $row->prov_id?>" <?=(!empty($psb_peserta) && $psb_peserta->prov_id == $row->prov_id)?'selected':''?>><?=$row->prov_name?></option>
+										<?php } ?>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="kota">Kota</label>
+									<select class="form-control" name="kota" id="kota">
+										<option value=0>--Pilih Kota--</option>
+										<?php if(!empty($kota)) { 
+											foreach($kota as $row){
+											?>
+											<option value="<?=$row->city_id?>" <?=(!empty($psb_peserta) && $psb_peserta->kota_id == $row->city_id)?'selected':''?>><?=$row->city_name?></option>
+										<?php }} ?>	
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="kecamatan">Kecamatan</label>
+									<input type="text" name="kecamatan" class="form-control" value="<?=$psb_peserta->kecamatan??''?>" id="kecamatan">
+								</div>
+								<div class="form-group">
+									<label for="kelurahan">Keluarahan/Desa</label>
+									<input type="text" name="kelurahan" class="form-control" value="<?=$psb_peserta->kelurahan??''?>" id="kelurahan">
+								</div>
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="tempat_lahir">Tempat Lahir</label>
-							<input type="text" name="tempat_lahir" class="form-control" id="tempat_lahir" value="<?=$psb_peserta->tempat_lahir??''?>" required>
-						</div>
-						<div class="form-group">
-							<label for="tanggal_lahir">Tanggal Lahir</label>
-							<input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir" value="<?=$psb_peserta->tanggal_lahir??''?>" required>
-						</div>
-						<div class="form-group">
-							<label for="usia_bulan">Usia</label>
-							<div class="row" style="margin-left:0px;">
-								<input type="number" name="usia_tahun" class="form-control col-md-2" id="usia_tahun" value="<?=$psb_peserta->usia_tahun??''?>" placeholder="Tahun">
-								<input type="number" name="usia_bulan" class="form-control col-md-2" id="usia_bulan" value="<?=$psb_peserta->usia_bulan??''?>" placeholder="Bulan" style="margin-left:10px;">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="jumlah_saudara">Jumlah Saudara Kandung</label>
-							<input type="number" name="jumlah_saudara" class="form-control" id="jumlah_saudara" value="<?=$psb_peserta->jumlah_saudara??''?>">
-						</div>
-						<div class="form-group">
-							<label for="anak_ke">Anak ke</label>
-							<input type="number" name="anak_ke" class="form-control" id="anak_ke" value="<?=$psb_peserta->anak_ke??''?>">
-						</div>
-						<div class="form-group">
-							<label for="alamat">Alamat Lengkap</label>
-							<textarea class="form-control" name="alamat" id="alamat"><?=$psb_peserta->alamat??''?></textarea>
-						</div>
-						<div class="form-group">
-							<label for="provinsi">Provinsi</label>
-							<select class="form-control" name="provinsi" id="provinsi">
-								<option value=0>--Pilih Provinsi--</option>
-								<?php foreach($provinsi as $row){?>
-									<option value="<?= $row->prov_id?>" <?=(!empty($psb_peserta) && $psb_peserta->prov_id == $row->prov_id)?'selected':''?>><?=$row->prov_name?></option>
-								<?php } ?>
-							</select>
-						</div>
-						<div class="form-group">
-							<label for="kota">Kota</label>
-							<select class="form-control" name="kota" id="kota">
-								<option value=0>--Pilih Kota--</option>
-								<?php if(!empty($kota)) { 
-									foreach($kota as $row){
-									?>
-									<option value="<?=$row->city_id?>" <?=(!empty($psb_peserta) && $psb_peserta->kota_id == $row->city_id)?'selected':''?>><?=$row->city_name?></option>
-								<?php }} ?>	
-							</select>
-						</div>
-						<div class="form-group">
-							<label for="kecamatan">Kecamatan</label>
-							<input type="text" name="kecamatan" class="form-control" value="<?=$psb_peserta->kecamatan??''?>" id="kecamatan">
-						</div>
-						<div class="form-group">
-							<label for="kelurahan">Keluarahan/Desa</label>
-							<input type="text" name="kelurahan" class="form-control" value="<?=$psb_peserta->kelurahan??''?>" id="kelurahan">
 						</div>
 						<h4>Data Wali Santri</h4>
 						<div class="row">

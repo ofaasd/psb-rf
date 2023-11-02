@@ -97,7 +97,7 @@
 							<label class="j-icon-right" for="login">
 								<i class="icofont icofont-ui-user"></i>
 							</label>
-							<input type="text" id="login" name="nik" placeholder="NIK" style="font-size:14px">
+							<input type="text" id="login" name="username" placeholder="Username" style="font-size:14px">
 						</div>
 					</div>
 					<!-- end login -->
