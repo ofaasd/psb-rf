@@ -24,7 +24,7 @@
 <ol start=1>
 	<li>Mendaftarkan diri melalui formulir di sebelah kanan atau jika sudah dapat melakukan login </li>
 	<li>Setelah Login silahkan mengisi formulir pendaftaran yang ada di dalam sistem</li>
-	<li>Membayar infaq pendaftaran sebesar Rp. 300.000 ke nomor Virtual Account yang akan diperoleh setelah pengisian formulir pendaftaran, pembayaran juga bisa secara tunai dengan datang langsung ke sekretariat PPATQ RADLATUL FALAH.</li>
+	<li>Membayar infaq pendaftaran sebesar Rp. 300.000 ke metode transfer ke Bank BRI dengan No.Rekening 5936-01-005247-53-0 a/n Pondok Anak Tahfidhul Qur’an Unit/Cabang BRI Gembong kemudian melaporkan bukti bayar ke Sekertariat PSB PPATQ Radlatul Falah</li>
 	<li>Setelah pembayaran, Admin PPDB akan menghubungi pendaftar untuk pengisian kuesioner Orangtua, pengisian tes potensi akademik dan dokumen syarat pendaftaran.</li>
 	<li>Pendaftar akan dihubungi dan dijadwalkan untuk proses wawancara orangtua beserta calon siswa dengan kepala sekolah atau yang mewakili.</li>
 	<li>Pendaftar yang dinyatakan diterima dan mendapatkan surat lolos PPDB melakukan daftar ulang dengan membayar uang pangkal.</li>
