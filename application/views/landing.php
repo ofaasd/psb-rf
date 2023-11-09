@@ -74,6 +74,13 @@
 		<div class="col-md-4">
 			<form action="<?php echo base_url()?>auth" method="post" class="j-pro" id="j-pro">
 					<!-- end /.header -->
+				<div class="j-header" style="background:#fff;padding:10px;">
+					<div class="text-center">
+						<small><b>Bagi yang belum memiliki akun silahkan lakukan pendaftaran ddengan mengklik tombol di bawah ini</b></small><br /><br />
+						<a href="<?php echo base_url() ?>welcome/register" class="btn btn-success btn-block">Daftar Disini</a>
+						<br /><br />ATAU <br /><br />
+					</div>
+				</div>
 				<div class="j-content">
 					
 						<center><h5>Login</h5></center>
@@ -128,9 +135,9 @@
 				</div>
 				<!-- end /.content -->
 				<div class="j-footer">
-					<center><button type="submit" class="btn btn-primary btn-block" style="float:none">Masuk</button> <br /><br />ATAU <br /><br />
-					<small><b>Bagi yang belum memiliki akun silahkan lakukan pendaftaran </b></small><br /><br />
-					<a href="<?php echo base_url() ?>welcome/register" class="btn btn-success btn-block">Daftar Disini</a></center>
+					<center>
+						<button type="submit" class="btn btn-primary btn-block" style="float:none">Masuk</button>
+					</center>
 				</div>
 				<!-- end /.footer -->
 			</form>

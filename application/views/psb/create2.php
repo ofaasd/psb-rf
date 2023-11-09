@@ -255,7 +255,7 @@
 					return true;
 				}
 				// Forbid next action on "Warning" step if the user is to young
-				if (newIndex === 3 && Number($("#age-2").val()) < 18) {
+				if (newIndex === 3 && Number($("#page-2").val()) < 18) {
 					return false;
 				}
 				// Needed in some cases if the user went back (clean up)
@@ -291,13 +291,23 @@
 						method : "POST",
 						data : form.serialize(),
 						success: function(data){
-							//alert("data berhasil disimpan");
-							if(data == "berhasil"){
-								window.location.href="<?php echo $redirect1 ?>";
-							}else{
-								window.location.href="<?php echo $redirect1 ?>";
+							//alert("data berhasil disimpan"); 	
+							switch(data){
+								case "0" : 
+									localStorage.setItem("msg", "Data Gagal Disimpan terdaftar");
+									break;
+								case "1" : 
+									localStorage.setItem("msg", "Data berhasil disimpan");
+									break;
+								case "2" : 
+									localStorage.setItem("msg", "Data sudah terdaftar");
+									break;
 							}
+							window.location.href="<?php echo $redirect1 ?>";
+							
+							console.log(typeof(data));
 						}
+						
 					});
 			}
 			}).validate({

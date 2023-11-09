@@ -17,6 +17,7 @@
 					
 				</div>
 				<div class="card-body">
+					
 					<form action="javascript:void(0)" method="post" id="form_pendaftaran">
 						<input type="hidden" name="id" value="<?=(!empty($id))?$id:""?>">
 						<h4>Data Santri Baru</h4>

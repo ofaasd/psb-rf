@@ -1,7 +1,7 @@
 <?php
 Class Wa_model extends CI_Model{
 	
-	public $number_key = '2Z17zDLogBMOaxnc';
+	public $number_key = '9qrE9KWANsXXHCA9';
 	public $wa_api = "X2Y7UZOZT0WVQVTG";
 	
     public function validasi($id, $status){

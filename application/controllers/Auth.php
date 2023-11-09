@@ -153,10 +153,10 @@ https://psb.ppatq-rf.id';
 			$month = $dob->diff($today)->m;
 			$day = $dob->diff($today)->d;
 			//echo "Age is"." ".$year."year"." ",$month."months"." ".$day."days";
-			if($year >= 5 && $year < 8){
+			if($year >= 5 && $year < 13){
 				return true;
 			}else{
-				$this->form_validation->set_message('tanggal_lahir_check', 'Usia minimal 5 tahun dan maksimal 7 tahun');
+				$this->form_validation->set_message('tanggal_lahir_check', 'Usia minimal 5 tahun dan maksimal 12 tahun');
 				return false;
 			}
 		}

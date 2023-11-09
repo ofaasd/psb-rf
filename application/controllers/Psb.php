@@ -47,7 +47,7 @@
 			$gelombang = $this->db->limit("1")->get_where('psb_gelombang',array('pmb_online'=>1))->row()->id;
 			$tanggal = date('Y-m-d H:i:s');
 			$dateTime = new DateTime($tanggal); 
-			$cek_nik  = $this->db->get_where("psb_peserta_online",array("nik"=>$this->input->post('nik'),"deleted_at"=>NULL))->num_rows();
+			$cek_nik  = $this->db->get_where("psb_peserta_online",array("nama"=>$this->input->post('nama'),"tanggal_lahir"=>$this->input->post('tanggal_lahir'),"deleted_at"=>NULL))->num_rows();
 			$id = $this->input->post('id');
 			if($cek_nik > 0 && empty($id)){
 				echo 2;

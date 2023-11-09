@@ -10,7 +10,17 @@
 						if(empty($peserta)){
 							echo "<div class='alert alert-danger bg-danger text-light'>Anda belum melakukan registrasi. Silahkan Klik <a href='" . base_url('psb/create') . "' class='btn btn-primary btn-sm'>Disini</a> untuk mendaftar</div>";
 						}else{
-							echo "<a href='" . base_url('psb/create') . "' class='btn btn-primary'>+ Calon Santri Baru</a>";
+							echo "<a href='" . base_url('psb/create') . "' class='btn btn-primary' style='margin-bottom:10px'>+ Calon Santri Baru</a>";
+						}
+					
+						if(!empty($_SESSION['msg'])){ 
+							echo "<div class='alert bg-primary text-light'>" . $_SESSION['msg'] . "</div>"	;
+							$_SESSION['msg'] = NULL;
+						}
+						
+						if(!empty($_SESSION['error'])){ 
+							echo "<div class='alert bg-danger text-light'>" . $_SESSION['error'] . "</div>"	;
+							$_SESSION['error'] = NULL;
 						}
 					?>
 					<table class='table table-hover'>
@@ -50,3 +60,13 @@
 		</div>
 	</div>
 </div>
+<script>
+	$(document).ready(function(){
+		
+		if(localStorage.getItem('msg')){
+			$(".card-body").prepend("<div class='alert bg-primary text-light'>"+ localStorage.getItem('msg') +"</div>")
+			localStorage.removeItem("msg");
+
+		}
+	})
+</script>
