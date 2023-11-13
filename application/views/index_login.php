@@ -70,6 +70,12 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 <script src="<?php echo base_url()?>assets/js/bootstrap-datepicker.min.js"></script>
  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ <style>
+	
+	.pcoded .pcoded-inner-content{
+		padding:0 !important;
+	}
+</style>
 </head>
 
 <body>
@@ -130,12 +136,58 @@
         <!-- Sidebar inner chat end-->
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
+			<nav class="pcoded-navbar" navbar-theme="themelight1" active-item-theme="theme4" sub-item-theme="theme2" active-item-style="style1" pcoded-navbar-position="fixed">
+                    <div class="pcoded-inner-navbar">
+                        
+                        <ul class="pcoded-item pcoded-left-item pcoded-left-align">
+							<li class="pcoded-hasmenu is-hover">
+								<a href="<?= base_url('') ?>">
+									<span class="pcoded-micon"><i class="fa fa-home"></i></span>
+									<span class="pcoded-mtext">Home</span>
+								</a>
+                                        
+							</li>
+							<li class="pcoded-hasmenu is-hover">
+								<a href="<?= base_url('psb') ?>">
+									<span class="pcoded-micon"><i class="feather icon-user"></i></span>
+									<span class="pcoded-mtext">Form Pendaftaran</span>
+								</a>        
+							</li>
+							<li class="pcoded-hasmenu is-hover">
+								<a href="#">
+									<span class="pcoded-micon"><i class="feather icon-user"></i></span>
+									<span class="pcoded-mtext">Update Data</span>
+								</a>        
+							</li>
+							<li class="pcoded-hasmenu is-hover">
+								<a href="#">
+									<span class="pcoded-micon"><i class="feather icon-user"></i></span>
+									<span class="pcoded-mtext">Upload Berkas</span>
+								</a>        
+							</li>
+                        </ul>
+                    </div>
+                </nav>
                 <div class="pcoded-content">
                     <div class="pcoded-inner-content">
                         <!-- Main-body start -->
                         <div class="main-body">
                             <div class="page-wrapper" style="padding:0;">
-                            	<?php echo $content?>
+								
+								<div class="jumbotron" style="margin-bottom:0;">
+									<h4 class="text-center font-weight-bold">
+										ANJUNGAN INFORMASI <br /><br />
+										
+										PENERIMAAN PESERTA DIDIK BARU (PPDB)<br /><br />
+
+										PPATQ RAUDLATUL FALAH<br /><br />
+
+										TAHUN AJARAN 2024/2025<br /><br />
+									</h4>
+								</div>
+								<div class="container">
+                            		<?php echo $content?>
+								</div>
                             </div>
                         </div>
                         <div id="styleSelector">

@@ -25,7 +25,12 @@
 								</td>
 							</tr>
 							<tr>
-								<td>3. Cetak Formulir Pendaftaran 
+								<td>
+									3. Upload Berkas Pendukung <a href="<?php echo base_url()?>psb/upload_berkas" class="btn btn-primary btn-sm" >Pastikan data sudah benar kemudian klik tombol validasi</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4. Cetak Formulir Pendaftaran 
 									<a href="<?php echo base_url();?>psb/cetak"  class="btn btn-primary btn-sm">
 										<span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
 										<span class="pcoded-mtext">Klik Disini</span>
@@ -33,13 +38,13 @@
 								</td>
 							</tr>
 							<tr>
-								<td>4. Lakukan Pembayaran pendaftaran. klik <a href="<?php echo base_url()?>formulir/upload_bukti" class="btn btn-primary btn-sm"> Upload Bukti Pembayaran</a> untuk mengetahui detailnya</td>
+								<td>5. Lakukan Pembayaran pendaftaran. klik <a href="<?php echo base_url()?>formulir/upload_bukti" class="btn btn-primary btn-sm"> Upload Bukti Pembayaran</a> untuk mengetahui detailnya</td>
 							</tr>
 							<tr>
-								<td>5. <a href="<?php echo base_url()?>formulir/jadwal_ujian" class="btn btn-primary btn-sm"> Lihat Jadwal Ujian</a></td>
+								<td>6. <a href="<?php echo base_url()?>formulir/jadwal_ujian" class="btn btn-primary btn-sm"> Lihat Jadwal Ujian</a></td>
 							</tr>
 							<tr>
-								<td>6. <a href="<?php echo base_url()?>formulir/pengumuman_ujian" class="btn btn-primary btn-sm"> Pengumuman Ujian</a></td>
+								<td>7. <a href="<?php echo base_url()?>formulir/pengumuman_ujian" class="btn btn-primary btn-sm"> Pengumuman Ujian</a></td>
 							</tr>
 							
 						</tbody>

@@ -81,8 +81,8 @@
 				$password = $this->input->post('password');
 				$tanggal = date("Ymd",strtotime($tgl_lahir));
 				$alamat = $this->input->post('alamat');
-				$prov_id = $this->input->post('prov_id');
-				$kota_id = $this->input->post('kota_id');
+				$prov_id = $this->input->post('provinsi');
+				$kota_id = $this->input->post('kota');
 				$kecamatan = $this->input->post('kecamatan');
 				$kelurahan = $this->input->post('kelurahan');
 				$kode_pos = $this->input->post('kode_pos');
